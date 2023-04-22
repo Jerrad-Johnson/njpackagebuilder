@@ -1,0 +1,51 @@
+{
+  "name": "njGallery",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "description": "NextJS Justified Gallery with Lightbox.",
+  "keywords": [
+    "Justified Gallery",
+    "Gallery",
+    "NextJS Gallery",
+    "Gallery and Lightbox",
+    "NextJS Gallery and Lightbox",
+    "Justified Gallery",
+    "NextJS Justified Gallery"
+  ],
+  "homepage": "https://github.com/Jerrad-Johnson/njGallery",
+  "author": "Jerrad Johnson <jerrad.johnson3@gmail.com>",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "scripts": {
+    "build": "babel src/ -d dist"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@use-it/event-listener": "^0.1.7",
+    "next": "13.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@types/node": "18.15.12",
+    "@types/react": "18.0.37",
+    "@types/react-dom": "18.0.11",
+    "@use-it/event-listener": "^0.1.7",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "next": "13.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "^5.0.4"
+  }
+}
