@@ -20,7 +20,7 @@
     "target": "es6",
     "outDir": "./stripped/",
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "noEmit": false,
   },
   "include": ["./src"],
