@@ -2,7 +2,7 @@ const cc = console.log;
 export function checkInputForErrors(galleryInputsFromUser) {
     const { images, containerPadding, imagePadding, targetRowHeight, targetRowHeightTolerance, showIncompleteRows, maxRows } = Object.assign({}, galleryInputsFromUser);
     if (!images)
-        throw new Error(`You must an images array. This can be an empty array.`);
+        throw new Error(`You must include an images array. This can be an empty array.`);
     for (let image of images) {
         if (!image.src)
             throw new Error(`Every image must include a source (URL), but is missing on ${image.src}`);

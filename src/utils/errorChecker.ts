@@ -1,12 +1,11 @@
 import {GalleryInputs} from "../types/njGallery";
 const cc = console.log;
 
-
 export function checkInputForErrors(galleryInputsFromUser: GalleryInputs): void{
     const {images, containerPadding, imagePadding, targetRowHeight, targetRowHeightTolerance,
         showIncompleteRows, maxRows } = {...galleryInputsFromUser};
 
-    if (!images) throw new Error(`You must an images array. This can be an empty array.`);
+    if (!images) throw new Error(`You must include an images array. This can be an empty array.`);
 
     for (let image of images){
         if (!image.src) throw new Error(`Every image must include a source (URL), but is missing on ${image.src}`);
