@@ -17,7 +17,6 @@
   "homepage": "https://github.com/Jerrad-Johnson/njGallery",
   "author": "Jerrad Johnson <jerrad.johnson3@gmail.com>",
   "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -32,7 +31,6 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
-    "@rollup/plugin-typescript": "^11.1.0",
     "@types/node": "18.15.12",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
@@ -41,10 +39,7 @@
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rollup-plugin-embed-css": "^1.0.26",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-styles": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^5.0.4"
   }
