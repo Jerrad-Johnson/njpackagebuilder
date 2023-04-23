@@ -3,32 +3,46 @@
 ## About
 
 
-njGallery (Next.JS Justified Gallery) is an image gallery that takes as input an array of image URLs and sizes them to fill the width of the container they've been placed in.
+njGallery (Next.JS Justified Gallery) was designed to maintaining image aspect ratio without cropping. It takes 
+as input an array of image URLs and sizes the images to fill the width of the container they've been placed in.
 
-When the browser window is resized, the calculation re-runs in order to maintain justification. Lightbox images and fullscreen images also maintain their aspect ratios.
+When the browser window is resized, the calculation re-runs in order to maintain justification. 
+
+Images always maintain their original aspect ratios. This applies to the gallery, lightbox, and fullscreen mode.
 
 Live demo: http://business.jerradjohnson.com/gallery
 
 Examples:
 
 ### Gallery
+
 ![img.png](img.png)
 
 
 ### Lightbox
+
 ![img_1.png](img_1.png)
 
 ### Fullscreen Mode
+
 ![img_3.png](img_3.png)
+
+## Features
+
+The lightbox offers autoplay, shuffle, a dark background mode, and optional tooltip display.
+
+Autoplay or shuffle continue if enabled when fullscreen mode is chosen. 
+
+Keypresses (right and left arrows, escape) will change to the next or previous image, or close the lightbox or fullscreen mode.
 
 ## Usage
 
 ### Import
-On the page you want to use this lightbox, import the gallery, and import the CSS (or create your own styles), e.g.
+Import njGallery, and import the CSS (or create your own styles), e.g.
 
 ```
 import {NjGallery} from 'njGallery'
-import "node_modules/njgallery/styles/lightbox.css";
+import "njgallery/styles/lightbox.css";
 ```
 
 ### Setup
@@ -39,7 +53,7 @@ Set remote image access in `next.js.config`, e.g.
 module.exports = {
   reactStrictMode: true,
     images: {
-        domains: ['localhost', 'businessbackend.jerradjohnson.com', 'raw.githubusercontent.com'],
+        domains: ['raw.githubusercontent.com'],
     },
 }
 ```
@@ -84,7 +98,7 @@ If you're dynamically generating a list, pass an empty array of images `[]` unti
 
 ## Options
 
-**Default values will be used** if none of these values are set, and therefore you do not have to set any options. You may skip this section.
+Default values will be used if you set none of these values. **You may skip this section.**
 
 ### List
 Unless otherwise stated, any number examples must be a whole number, e.g. `20` and will be interpreted as a pixel value.
@@ -187,13 +201,18 @@ const galleryInputs = {
 
 ```
 
-***
+# Known Bugs
 
+## Major
+This bug may exist only on my website due to **other** code, I am not yet certain that it actually exists within njGallery. There are cases when the gallery disappears. The only reproducible cause has been scrolling to the bottom with a mobile device, then scrolling further -- stretching the screen. I suspect it's due to window height becoming undefined.
 
-***
+## Minor
+The "X" button may be hidden by the image in fullscreen mode if the aspect ratio fills the window.
+
+# Notes
+Project required `npx @next/codemod next-image-to-legacy-image`
 
 # Credits
-
 NextJS Justified Gallery uses a **slightly** modified justified-layout script by SmugMug.
 
-Their license is included in the respective folder `justified-layout` of this package.
+Their license is included `credits/LICENSE`
