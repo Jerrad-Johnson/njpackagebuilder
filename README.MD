@@ -6,9 +6,7 @@
 njGallery (Next.JS Justified Gallery) was designed to maintaining image aspect ratio without cropping. It takes 
 as input an array of image URLs and sizes the images to fill the width of the container they've been placed in.
 
-When the browser window is resized, the calculation re-runs in order to maintain justification. 
-
-Images always maintain their original aspect ratios. This applies to the gallery, lightbox, and fullscreen mode.
+Images always maintain their original aspect ratios. This applies to the gallery, lightbox, and fullscreen mode. When the browser window is resized, the calculation re-runs in order to maintain justification.
 
 Live demo: http://business.jerradjohnson.com/gallery
 

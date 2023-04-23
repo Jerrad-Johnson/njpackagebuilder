@@ -1,7 +1,6 @@
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
 import { useReducer, useRef, useState } from 'react';
 import { checkInputForErrors } from "./utils/errorChecker";
-import useResizeHook from "./hooks/useResizeHook";
 import addGalleryDefaults from "./utils/galleryDefaults";
 import createGalleryStyle from "./utils/galleryStyles";
 import { useWindowDimensions } from "./hooks/useWindowDimensions";
@@ -36,7 +35,7 @@ function NjGallery(props) {
     const galleryInputsWithDefaults = addGalleryDefaults(props); // TODO Design script to add original URL if large-img URL is not provided.
     const { containerPadding, containerWidth } = Object.assign({}, galleryInputsWithDefaults);
     const galleryCSS = createGalleryStyle(containerPadding, containerWidth);
-    useResizeHook(setImageElems, galleryInputsWithDefaults, galleryElemRef, setLightboxState, setLightboxEverOpened);
+    /*useResizeHook(setImageElems, galleryInputsWithDefaults, galleryElemRef, setLightboxState, setLightboxEverOpened);*/ // Caused rendering problems, and appears to have been completely useless.
     OnMount(lightboxOptionsActiveDispatch);
     OnPropsChange(props, galleryInputsWithDefaults, galleryElemRef, setLightboxState, setLightboxEverOpened, setImageElems, lightboxOptionsActiveDispatch);
     HideNavbarWhenLightboxOpen(lightboxState);
