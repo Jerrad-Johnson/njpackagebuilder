@@ -1,5 +1,5 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import Image from "next/image";
+import Image from "next/legacy/image";
 const layoutGeometry = require('../justified-layout');
 import { handleLightbox } from "./lightbox";
 const cc = console.log;
