@@ -7,6 +7,8 @@ njGallery (Next.JS Justified Gallery) is an image gallery that takes as input an
 
 When the browser window is resized, the calculation re-runs in order to maintain justification. Lightbox images and fullscreen images also maintain their aspect ratios.
 
+Live demo: http://business.jerradjohnson.com/gallery
+
 Examples:
 
 ![img.png](img.png)

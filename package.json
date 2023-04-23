@@ -14,8 +14,9 @@
   "scripts": {
     "build": "rollup -c"
   },
-  "homepage": "https://github.com/Jerrad-Johnson/njGallery",
-  "author": "Jerrad Johnson <jerrad.johnson3@gmail.com>",
+  "repository": "https://github.com/Jerrad-Johnson/njpackagebuilder",
+  "homepage": "https://github.com/Jerrad-Johnson/njpackagebuilder",
+  "author": "Jerrad Johnson",
   "main": "dist/cjs/index.js",
   "dependencies": {
     "@emotion/react": "^11.10.6",
