@@ -11,11 +11,16 @@ Live demo: http://business.jerradjohnson.com/gallery
 
 Examples:
 
+### Gallery
 ![img.png](img.png)
 
+
+### Lightbox
 ![img_1.png](img_1.png)
 
+### Fullscreen Mode
 ![img_3.png](img_3.png)
+
 ## Usage
 
 ### Import
