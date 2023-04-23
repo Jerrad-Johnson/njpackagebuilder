@@ -19,9 +19,10 @@ export function checkInputForErrors(galleryInputsFromUser) {
             throw new Error(`Image Height must be a number, not a string. Please fix entry ${image.src}`);
         if (image.blurSrc === "")
             throw new Error(`Blur Src must not be an empty string. Provide a URL, or leave it undefined. Please fix entry ${image.src}`);
+        //@ts-ignore
         if (image.tooltip_left && String(image.tooltip_left["$$typeof"]) !== "Symbol(react.element)") {
             throw new Error(`If you include a left tooltip, it must be a React JSX element. Please fix entry ${image.src}`);
-        }
+        } //@ts-ignore
         if (image.tooltip_right && String(image.tooltip_right["$$typeof"]) !== "Symbol(react.element)") {
             throw new Error(`If you include a right tooltip, it must be a React JSX element. Please fix entry ${image.src}`);
         }
