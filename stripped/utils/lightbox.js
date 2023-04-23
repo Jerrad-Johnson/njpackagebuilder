@@ -4,7 +4,7 @@ import { lightboxInitialValueCase, lightboxReducerCases } from "./variables";
 import createGalleryLayout from "./galleryLayout";
 import useEventListener from "@use-it/event-listener";
 import { CircularProgress, createTheme, ThemeProvider } from "@mui/material";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import CloseIcon from "@mui/icons-material/Close";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import ShuffleIcon from "@mui/icons-material/Shuffle";
