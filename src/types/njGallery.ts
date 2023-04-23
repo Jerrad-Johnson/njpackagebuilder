@@ -1,4 +1,4 @@
-import {Dispatch, MutableRefObject, SetStateAction} from "react";
+import {Dispatch, MutableRefObject, ReactElement, SetStateAction} from "react";
 
 export interface GalleryInputs {
     images: ImageData[];
@@ -41,8 +41,16 @@ export interface ImageData {
     width: number;
     alt?: string;
     lg_img_url?: string;
-    tooltip_left?: JSX.Element[];
-    tooltip_right?: JSX.Element[];
+    tooltip_left?: ReactElement;
+    tooltip_right?: ReactElement;
+    /*For Ideal Portraits*/
+    date: string;
+    iso: number;
+    aperture: string;
+    exposure: string;
+    focal: string;
+    lens: string;
+    camera_model: string;
 }
 export type ImagesData = ImageData[];
 

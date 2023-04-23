@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import {
     GalleryElemRef,
     GalleryInputsWithDefaults,
@@ -87,13 +87,13 @@ function reformatGalleryData(galleryLayout: GalleryLayoutData, images: ImageData
     const imagesCopy = [...images];
     let reformattedGalleryLayout = [];
 
-    for (let i = 0; i < galleryLayout.boxes.length; i++){//@ts-ignore
-        reformattedGalleryLayout[i] = {} as ReformattedGalleryLayout;//@ts-ignore
-        reformattedGalleryLayout[i].boxHeight = galleryLayout.boxes[i].height;//@ts-ignore
-        reformattedGalleryLayout[i].boxWidth = galleryLayout.boxes[i].width;//@ts-ignore
-        reformattedGalleryLayout[i].imgSrc = imagesCopy[i].src;//@ts-ignore
-        reformattedGalleryLayout[i].imgBlurSrc = imagesCopy[i].blurSrc;//@ts-ignore
-        reformattedGalleryLayout[i].alt = imagesCopy[i].alt;//@ts-ignore//@ts-ignore
+    for (let i = 0; i < galleryLayout.boxes.length; i++){
+        reformattedGalleryLayout[i] = {} as ReformattedGalleryLayout;
+        reformattedGalleryLayout[i].boxHeight = galleryLayout.boxes[i].height;
+        reformattedGalleryLayout[i].boxWidth = galleryLayout.boxes[i].width;
+        reformattedGalleryLayout[i].imgSrc = imagesCopy[i].src;
+        reformattedGalleryLayout[i].imgBlurSrc = imagesCopy[i].blurSrc;
+        reformattedGalleryLayout[i].alt = imagesCopy[i].alt;
         reformattedGalleryLayout[i].lg_img_url = imagesCopy[i].lg_img_url;
     }
 

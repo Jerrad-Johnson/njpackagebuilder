@@ -29,7 +29,6 @@ import {
     CreateFullscreenLightboxElems,
     CreateLightbox
 } from "./utils/lightbox";
-import React from "react";
 const cc = console.log;
 
 /*TODO

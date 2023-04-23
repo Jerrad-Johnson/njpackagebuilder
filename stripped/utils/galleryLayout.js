@@ -1,5 +1,5 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import Image from "next/legacy/image";
+import Image from "next/image";
 const layoutGeometry = require('../justified-layout');
 import { handleLightbox } from "./lightbox";
 const cc = console.log;
@@ -47,13 +47,13 @@ function calculateGalleryLayout(galleryInputsWithDefaultsCopy, galleryElementRef
 function reformatGalleryData(galleryLayout, images) {
     const imagesCopy = [...images];
     let reformattedGalleryLayout = [];
-    for (let i = 0; i < galleryLayout.boxes.length; i++) { //@ts-ignore
-        reformattedGalleryLayout[i] = {}; //@ts-ignore
-        reformattedGalleryLayout[i].boxHeight = galleryLayout.boxes[i].height; //@ts-ignore
-        reformattedGalleryLayout[i].boxWidth = galleryLayout.boxes[i].width; //@ts-ignore
-        reformattedGalleryLayout[i].imgSrc = imagesCopy[i].src; //@ts-ignore
-        reformattedGalleryLayout[i].imgBlurSrc = imagesCopy[i].blurSrc; //@ts-ignore
-        reformattedGalleryLayout[i].alt = imagesCopy[i].alt; //@ts-ignore//@ts-ignore
+    for (let i = 0; i < galleryLayout.boxes.length; i++) {
+        reformattedGalleryLayout[i] = {};
+        reformattedGalleryLayout[i].boxHeight = galleryLayout.boxes[i].height;
+        reformattedGalleryLayout[i].boxWidth = galleryLayout.boxes[i].width;
+        reformattedGalleryLayout[i].imgSrc = imagesCopy[i].src;
+        reformattedGalleryLayout[i].imgBlurSrc = imagesCopy[i].blurSrc;
+        reformattedGalleryLayout[i].alt = imagesCopy[i].alt;
         reformattedGalleryLayout[i].lg_img_url = imagesCopy[i].lg_img_url;
     }
     return reformattedGalleryLayout;
