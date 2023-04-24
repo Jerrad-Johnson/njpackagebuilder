@@ -3,7 +3,7 @@
 ## About
 
 
-njGallery (Next.JS Justified Gallery) was designed to maintaining image aspect ratio without cropping. It takes 
+njGallery (Next.JS Justified Gallery) was designed to maintain image aspect ratio without cropping. It takes
 as input an array of image URLs and sizes the images to fill the width of the container they've been placed in.
 
 Images always maintain their original aspect ratios. This applies to the gallery, lightbox, and fullscreen mode. When the browser window is resized, the calculation re-runs in order to maintain justification.
@@ -29,7 +29,7 @@ Examples:
 
 The lightbox offers autoplay, shuffle, a dark background mode, and optional tooltip display.
 
-Autoplay or shuffle continue if enabled when fullscreen mode is chosen. 
+Autoplay or shuffle continue if enabled when fullscreen mode is chosen.
 
 Keypresses (right and left arrows, escape) will change to the next or previous image, or close the lightbox or fullscreen mode.
 
@@ -45,7 +45,7 @@ import "njgallery/styles/lightbox.css";
 
 ### Setup
 
-Set remote image access in `next.js.config`, e.g. 
+Set remote image access in `next.js.config`, e.g.
 
 ```
 module.exports = {
@@ -201,11 +201,9 @@ const galleryInputs = {
 
 # Known Bugs
 
-## Major
-This bug may exist only on my website due to **other** code, I am not yet certain that it actually exists within njGallery. There are cases when the gallery disappears. The only reproducible cause has been scrolling to the bottom with a mobile device, then scrolling further -- stretching the screen. I suspect it's due to window height becoming undefined.
-
 ## Minor
-The "X" button may be hidden by the image in fullscreen mode if the aspect ratio fills the window.
+
+Scrollbars appear upon window resize if in fullscreen mode. This slightly hides the close button.
 
 # Notes
 Project required `npx @next/codemod next-image-to-legacy-image`
